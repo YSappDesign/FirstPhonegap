@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="frameworks/jquery/jquery.mobile-1.4.0.min.css">
+	<script src= "js/jquery-2.0.3.js"></script>
+	<script src= "frameworks/jquery/jquery.mobile-1.4.0.min.js"></script>
+	<title>First Phonegap App</title>
+</head>
+<body>
+	<div data-role="header">
+		<h1>Phonegap App</h1>
+	</div>
+	<div>
+		<button id="tryButton" class="ui-btn ui-btn-inline">Try Me</button>
+		<button id="Clear" class="ui-btn ui-btn-inline">Clear</button>
+	</div>
+	
+	<ul data-role="listview" id="list" >
+	</ul>
+	
+	
+</body>
+<script type="text/javascript">
+	$( document ).ready(function(){
+
+		$( "#tryButton" ).on("click", function() {
+
+			$("#list").append("<li>"+Date()+"</li>");
+
+		});
+		$( "#Clear" ).on("click", function() {
+
+			$("#list").html("");
+			
+		});
+
+		});
+</script>
+</html>
