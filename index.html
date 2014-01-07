@@ -7,16 +7,27 @@
 	<title>First Phonegap App</title>
 </head>
 <body>
-	<div data-role="header">
-		<h1>Phonegap App</h1>
-	</div>
-	<div>
+	<div data-role="page" id="home">
+ <div data-role="header">
+  <h1>Phonegap App</h1>
+ </div>
+ <div data-role="content">
+  	<div>
 		<button id="tryButton" class="ui-btn ui-btn-inline">Try Me</button>
 		<button id="Clear" class="ui-btn ui-btn-inline">Clear</button>
 	</div>
+	</br>
+	<div>
+		<ul data-role="listview" id="list" >
+		</ul>
+	</div>
+ </div>
+ <div data-role="footer">
+  <h4>Created by Yoav</h4>
+ </div>
+</div>
 	
-	<ul data-role="listview" id="list" >
-	</ul>
+	
 	
 	
 </body>
@@ -25,7 +36,8 @@
 
 		$( "#tryButton" ).on("click", function() {
 
-			$("#list").append("<li>"+Date()+"</li>");
+			$("#list").append("<li>"+"Hello World!"+"</li>");
+			$('#list').listview('refresh');
 
 		});
 		$( "#Clear" ).on("click", function() {
