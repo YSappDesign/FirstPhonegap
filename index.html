@@ -39,6 +39,7 @@
 			var insertText = $("#text-basic").val();
 			if (insertText != "") {
 				$("#list").append("<li>"+insertText+"</li>");
+				$("#text-basic").val('');
 			}
 			else{
 				$("#list").append("<li>"+Date()+"</li>");
